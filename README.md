@@ -60,13 +60,13 @@ This exercise uses the publicly accessible **SMART Health IT FHIR R4 sandbox** (
 
 ## Getting Started
 
-### Prerequisites
-
-- Python 3.8+
-- Jupyter Notebook or JupyterLab (`pip install notebook`)
-- `requests` library (`pip install requests`) — also installed automatically by the first notebook cell
-
 ### Running the Notebook
+
+#### Codespaces
+Create new Codespace
+Open the `api_homework.ipynb` and begin following the instructions in the notebook
+
+#### Running locally
 
 ```bash
 # Clone the repository (if you haven't already)
@@ -88,10 +88,8 @@ Then follow the cells from top to bottom, reading the explanations and executing
 
 | API | Documentation |
 |-----|---------------|
-| Humor API (`api.humorapi.com`) | https://humorapi.com/docs/ |
+| Joke API (`official-joke-api.appspot.com/random_joke`) | -------------|
 | SMART Health IT FHIR R4 Sandbox (`r4.smarthealthit.org`) | https://docs.smarthealthit.org/ |
-
-> **Note:** The Humor API requires a free API key for production use. A `DEMO` key is used in the notebook for classroom purposes and may be rate-limited.
 
 ---
 

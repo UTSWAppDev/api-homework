@@ -1,11 +1,18 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/python
+// README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
 {
-	"name": "Python 3",
+	"name": "Ubuntu",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/python:2-3.14-trixie",
+	"image": "mcr.microsoft.com/devcontainers/base:noble",
 	"features": {
-		"ghcr.io/devcontainers/features/git-lfs:1": {}
+		"ghcr.io/devcontainers/features/git-lfs:1": {
+			"autoPull": true,
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers/features/python:1": {
+			"installTools": true,
+			"version": "os-provided"
+		}
 	},
 	"customizations": {
 		"vscode": {
@@ -18,11 +25,10 @@
 				"ms-python.vscode-pylance",
 				"ms-toolsai.jupyter-renderers",
 				"ms-toolsai.jupyter-keymap",
-				"ms-toolsai.vscode-jupyter-cell-tags",
-				"ms-vscode.live-server"
+				"ms-toolsai.vscode-jupyter-cell-tags"
 			]
 		}
-	}
+	},
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
@@ -31,7 +37,7 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "pip3 install --user -r requirements.txt",
+	"postCreateCommand": "sudo apt update && sudo apt install -y python3-ipykernel python3-requests"
 
 	// Configure tool-specific properties.
 	// "customizations": {},
