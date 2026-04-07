@@ -25,8 +25,8 @@ By the end of the exercise students will be able to:
 | Method   | Action                                |
 |----------|---------------------------------------|
 | `GET`    | Retrieve a resource                   |
-| `POST`   | Send data to update a resource        |
-| `PUT`    | Create or fully replace a resource    |
+| `POST`   | Create a resource        |
+| `PUT`    | Update a resource    |
 | `DELETE` | Remove a resource                     |
 
 ### JSON
